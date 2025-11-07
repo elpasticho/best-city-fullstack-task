@@ -9,10 +9,7 @@ const connectDatabase = () => {
         return;
     }
 
-    mongoose.connect(MONGO_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    })
+    mongoose.connect(MONGO_URI)
     .then((data) => {
         console.log(`✅ MongoDB Connected: ${data.connection.host}`);
     })
